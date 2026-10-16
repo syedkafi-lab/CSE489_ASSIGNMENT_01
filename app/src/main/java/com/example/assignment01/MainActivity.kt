@@ -1,6 +1,7 @@
 package com.example.assignment01
 
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.assignment01.databinding.ActivityMainBinding
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.title = getString(R.string.app_name)
 
         // Ensure state restoration if passed via Bundle
@@ -32,6 +34,58 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(MainViewModel.KEY_INPUT_AMOUNT, viewModel.inputAmount.value.orEmpty())
+    }
+
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+        if (event.action == KeyEvent.ACTION_DOWN) {
+            when (event.keyCode) {
+                KeyEvent.KEYCODE_0, KeyEvent.KEYCODE_NUMPAD_0 -> {
+                    viewModel.onDigitClicked("0")
+                    return true
+                }
+                KeyEvent.KEYCODE_1, KeyEvent.KEYCODE_NUMPAD_1 -> {
+                    viewModel.onDigitClicked("1")
+                    return true
+                }
+                KeyEvent.KEYCODE_2, KeyEvent.KEYCODE_NUMPAD_2 -> {
+                    viewModel.onDigitClicked("2")
+                    return true
+                }
+                KeyEvent.KEYCODE_3, KeyEvent.KEYCODE_NUMPAD_3 -> {
+                    viewModel.onDigitClicked("3")
+                    return true
+                }
+                KeyEvent.KEYCODE_4, KeyEvent.KEYCODE_NUMPAD_4 -> {
+                    viewModel.onDigitClicked("4")
+                    return true
+                }
+                KeyEvent.KEYCODE_5, KeyEvent.KEYCODE_NUMPAD_5 -> {
+                    viewModel.onDigitClicked("5")
+                    return true
+                }
+                KeyEvent.KEYCODE_6, KeyEvent.KEYCODE_NUMPAD_6 -> {
+                    viewModel.onDigitClicked("6")
+                    return true
+                }
+                KeyEvent.KEYCODE_7, KeyEvent.KEYCODE_NUMPAD_7 -> {
+                    viewModel.onDigitClicked("7")
+                    return true
+                }
+                KeyEvent.KEYCODE_8, KeyEvent.KEYCODE_NUMPAD_8 -> {
+                    viewModel.onDigitClicked("8")
+                    return true
+                }
+                KeyEvent.KEYCODE_9, KeyEvent.KEYCODE_NUMPAD_9 -> {
+                    viewModel.onDigitClicked("9")
+                    return true
+                }
+                KeyEvent.KEYCODE_DEL, KeyEvent.KEYCODE_FORWARD_DEL, KeyEvent.KEYCODE_C, KeyEvent.KEYCODE_ESCAPE -> {
+                    viewModel.onClearClicked()
+                    return true
+                }
+            }
+        }
+        return super.dispatchKeyEvent(event)
     }
 
     private fun setupObservers() {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Screen Paddings and Margins -->
+    <dimen name="toolbar_height">56dp</dimen>
     <dimen name="screen_margin_left_right">40dp</dimen>
     <dimen name="screen_margin_top">16dp</dimen>
     <dimen name="screen_margin_bottom">12dp</dimen>
