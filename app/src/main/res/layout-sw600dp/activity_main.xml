@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/screen_margin_left_right"
+    android:paddingTop="@dimen/screen_margin_top"
+    android:paddingEnd="@dimen/screen_margin_left_right"
+    android:paddingBottom="@dimen/screen_margin_bottom"
+    tools:context=".MainActivity">
+
+    <!-- Taka Display Label & Value (Centered Horizontally) -->
+    <TextView
+        android:id="@+id/tvTakaDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/taka_label_empty"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taka_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Notes List (Left side, single column for Portrait Tablet) -->
+    <LinearLayout
+        android:id="@+id/llNotesList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/taka_margin_bottom"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTakaDisplay">
+
+        <TextView
+            android:id="@+id/tvNote500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/note_margin_bottom"
+            android:text="@string/note_500_init"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_text_size" />
+
+        <TextView
+            android:id="@+id/tvNote100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/note_margin_bottom"
+            android:text="@string/note_100_init"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_text_size" />
+
+        <TextView
+            android:id="@+id/tvNote50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/note_margin_bottom"
+            android:text="@string/note_50_init"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_text_size" />
+
+        <TextView
+            android:id="@+id/tvNote20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/note_margin_bottom"
+            android:text="@string/note_20_init"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_text_size" />
+
+        <TextView
+            android:id="@+id/tvNote10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/note_margin_bottom"
+            android:text="@string/note_10_init"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_text_size" />
+
+        <TextView
+            android:id="@+id/tvNote5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/note_margin_bottom"
+            android:text="@string/note_5_init"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_text_size" />
+
+        <TextView
+            android:id="@+id/tvNote2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/note_margin_bottom"
+            android:text="@string/note_2_init"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_text_size" />
+
+        <TextView
+            android:id="@+id/tvNote1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/note_margin_bottom"
+            android:text="@string/note_1_init"
+            android:textColor="@color/black"
+            android:textSize="@dimen/note_text_size" />
+    </LinearLayout>
+
+    <!-- Keypad Container (Portrait Tablet: 3 Columns x 4 Rows, vertically centered with note list) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clKeypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/llNotesList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/llNotesList">
+
+        <!-- Row 1: 1, 2, 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn1"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_1"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintEnd_toStartOf="@id/btn2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn2"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_2"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintEnd_toStartOf="@id/btn3"
+            app:layout_constraintStart_toEndOf="@id/btn1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn3"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_3"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Row 2: 4, 5, 6 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn4"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_4"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintStart_toStartOf="@id/btn1"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn5"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_5"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintStart_toStartOf="@id/btn2"
+            app:layout_constraintTop_toBottomOf="@id/btn2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn6"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_6"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintStart_toStartOf="@id/btn3"
+            app:layout_constraintTop_toBottomOf="@id/btn3" />
+
+        <!-- Row 3: 7, 8, 9 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn7"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_7"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintStart_toStartOf="@id/btn4"
+            app:layout_constraintTop_toBottomOf="@id/btn4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn8"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_8"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintStart_toStartOf="@id/btn5"
+            app:layout_constraintTop_toBottomOf="@id/btn5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn9"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_9"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintStart_toStartOf="@id/btn6"
+            app:layout_constraintTop_toBottomOf="@id/btn6" />
+
+        <!-- Row 4: 0, CLEAR (CLEAR spans columns 2 and 3) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn0"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/keypad_button_width"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/digit_0"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintStart_toStartOf="@id/btn7"
+            app:layout_constraintTop_toBottomOf="@id/btn7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/keypad_button_height"
+            android:layout_margin="@dimen/keypad_button_margin"
+            android:backgroundTint="@color/keypad_btn_bg"
+            android:insetTop="@dimen/btn_inset"
+            android:insetBottom="@dimen/btn_inset"
+            android:padding="@dimen/btn_padding"
+            android:text="@string/btn_clear"
+            android:textColor="@color/keypad_btn_text"
+            android:textSize="@dimen/keypad_clear_text_size"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintEnd_toEndOf="@id/btn9"
+            app:layout_constraintStart_toStartOf="@id/btn8"
+            app:layout_constraintTop_toBottomOf="@id/btn8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

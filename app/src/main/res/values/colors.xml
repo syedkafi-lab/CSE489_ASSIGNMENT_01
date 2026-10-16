@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_primary">#008577</color>
+    <color name="teal_primary_dark">#00574B</color>
+    <color name="teal_accent">#004D40</color>
+    <color name="keypad_btn_bg">#E0E0E0</color>
+    <color name="keypad_btn_text">#000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

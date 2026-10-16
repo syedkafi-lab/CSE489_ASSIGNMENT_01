@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">VangtiChai</string>
+    <string name="taka_label_empty">Taka:</string>
+    <string name="taka_label_format">Taka: %1$s</string>
+    <string name="btn_clear">CLEAR</string>
+    <string name="note_format">%1$d: %2$d</string>
+
+    <!-- Keypad digit button strings -->
+    <string name="digit_0">0</string>
+    <string name="digit_1">1</string>
+    <string name="digit_2">2</string>
+    <string name="digit_3">3</string>
+    <string name="digit_4">4</string>
+    <string name="digit_5">5</string>
+    <string name="digit_6">6</string>
+    <string name="digit_7">7</string>
+    <string name="digit_8">8</string>
+    <string name="digit_9">9</string>
+
+    <!-- Initial note labels -->
+    <string name="note_500_init">500: 0</string>
+    <string name="note_100_init">100: 0</string>
+    <string name="note_50_init">50: 0</string>
+    <string name="note_20_init">20: 0</string>
+    <string name="note_10_init">10: 0</string>
+    <string name="note_5_init">5: 0</string>
+    <string name="note_2_init">2: 0</string>
+    <string name="note_1_init">1: 0</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Screen Paddings and Margins -->
+    <dimen name="screen_margin_left_right">30dp</dimen>
+    <dimen name="screen_margin_top">24dp</dimen>
+    <dimen name="screen_margin_bottom">16dp</dimen>
+
+    <!-- Taka Display -->
+    <dimen name="taka_text_size">20sp</dimen>
+    <dimen name="taka_margin_bottom">24dp</dimen>
+
+    <!-- Note List -->
+    <dimen name="note_text_size">18sp</dimen>
+    <dimen name="note_margin_bottom">12dp</dimen>
+    <dimen name="gap_between_note_columns">24dp</dimen>
+
+    <!-- Keypad -->
+    <dimen name="gap_between_notes_keypad">32dp</dimen>
+    <dimen name="keypad_button_width">54dp</dimen>
+    <dimen name="keypad_button_height">48dp</dimen>
+    <dimen name="keypad_clear_button_width">112dp</dimen>
+    <dimen name="keypad_button_margin">2dp</dimen>
+    <dimen name="keypad_text_size">18sp</dimen>
+    <dimen name="keypad_clear_text_size">14sp</dimen>
+
+    <!-- Button styling -->
+    <dimen name="btn_corner_radius">0dp</dimen>
+    <dimen name="btn_padding">0dp</dimen>
+    <dimen name="btn_inset">0dp</dimen>
+</resources>

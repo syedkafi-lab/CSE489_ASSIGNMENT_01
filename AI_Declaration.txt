@@ -1,0 +1,66 @@
+============================================================
+           AI USAGE DECLARATION
+============================================================
+
+Name: Fahim Montasir
+Student ID: 23141013
+Course: CSE 489 - Mobile Application Development
+Assignment: Assignment 1 (VangtiChai - Money Change Calculator)
+Date: 16/10/2026
+
+------------------------------------------------------------
+1. AI TOOLS USED (check all that apply)
+------------------------------------------------------------
+[ ] None
+[✓] ChatGPT
+[ ] GitHub Copilot
+[✓] Google Gemini
+[ ] Claude
+[ ] Cursor
+[ ] Other: ________________
+
+------------------------------------------------------------
+2. PURPOSE OF AI USE (check all that apply)
+------------------------------------------------------------
+[✓] Learning/understanding concepts
+[✓] Debugging my code
+[✓] Generating code snippets
+[ ] Writing text content
+[✓] Design/styling ideas
+[ ] Image generation
+[ ] Other: ________________
+
+------------------------------------------------------------
+3. DESCRIPTION OF AI USE
+------------------------------------------------------------
+I used AI assistance to help set up and configure the Android development environment, 
+understand ConstraintLayout chaining and guidelines for multi-screen responsiveness, 
+and debug layout scaling across orientation changes (Portrait <-> Landscape) and screen sizes 
+(Pixel XL phone and Nexus 10 tablet). AI was also consulted for structuring the greedy change 
+calculation logic and ViewModel state preservation across activity lifecycle recreation.
+
+I personally verified, debugged, and tested the app on an Android emulator to ensure 
+all requirements are completely satisfied before submission.
+
+------------------------------------------------------------
+4. AI-ASSISTED SECTIONS
+------------------------------------------------------------
+List specific files/sections where AI helped significantly:
+
+File: app/src/main/java/com/example/assignment01/MainActivity.kt (lifecycle handling & listeners)
+File: app/src/main/java/com/example/assignment01/MainViewModel.kt (calculateChange & SavedStateHandle)
+File: app/src/main/res/layout/activity_main.xml (ConstraintLayout keypad & notes positioning)
+File: app/src/main/res/layout-land/activity_main.xml (4x3 landscape keypad & 2-column notes)
+File: app/src/main/res/values/sizes.xml (dimension extraction and zero hardcoding)
+
+------------------------------------------------------------
+5. DECLARATION
+------------------------------------------------------------
+I declare that:
+- This disclosure is complete and accurate
+- I understand all code in my submission
+- I can explain and modify my work if asked
+- I take full responsibility for my submission
+
+Signature: Fahim Montasir
+Date: 16/10/2026
