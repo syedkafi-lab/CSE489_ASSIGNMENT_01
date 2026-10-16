@@ -2,8 +2,8 @@
            AI USAGE DECLARATION
 ============================================================
 
-Name: Fahim Montasir
-Student ID: 23141013
+Name: Sayed Kafi
+Student ID: 23101135
 Course: CSE 489 - Mobile Application Development
 Assignment: Assignment 1 (VangtiChai - Money Change Calculator)
 Date: 16/10/2026
@@ -12,9 +12,9 @@ Date: 16/10/2026
 1. AI TOOLS USED (check all that apply)
 ------------------------------------------------------------
 [ ] None
-[✓] ChatGPT
+[ ] ChatGPT
 [ ] GitHub Copilot
-[✓] Google Gemini
+[✓] Google Gemini Antigravity
 [ ] Claude
 [ ] Cursor
 [ ] Other: ________________
